@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main_parent {
+            width: 100vw;
+            height: auto;
+        }
+
+        .header_1sec {
+            z-index: 900;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            width: 100%;
+            height: 8vh;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin-left: .8rem;
+        }
+
+        .half_brand_name1 {
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .half_brand_name2 {
+            color: red;
+            font-size: x-large;
+            font-weight: 700;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        .brand_name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .shopping_icon {
+            font-size: x-large;
+
+            margin-right: .8rem;
+
+
+        }
+
+        .slider {
+            width: 100vw;
+            height: 60vh;
+            background-color: lightcoral;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        /* img {
+    height: 60vh;
+    width: 100vw;
+    margin-top: 2rem;
+    justify-content: center;
+
+
+
+
+  } */
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 100vw;
+            /* margin-top: 2rem; */
+
+            position: relative;
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* margin: auto; */
+        }
+
+        .img_slider {
+            width: 100vw;
+            height: 80vh;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: black;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            /* bottom: 1px; */
+            width: 100%;
+            text-align: center;
+        }
+
+        .text img {
+            width: 10vw;
+            height: 10vh;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: black;
+            margin-top: 2rem;
+            font-size: xx-large;
+            padding: 8px 12px;
+            position: absolute;
+            display: inline;
+            align-items: center;
+            top: 2rem;
+            left: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    header
+    {
+        display: flex;
+        width: 100vw;
+        height: 20vh;
+        background-color: lightpink;
+    }
+    
+    h1{
+        margin-left: 10px;
+    }
+    
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 20vh;
+    }
+    .About{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 20vh;
+    }
+    .About,h5{
+        
+        justify-content: space-between;
+        padding-right: 20px;
+        margin-left: 12px;
+        
+    }
+    main{
+        background-color:orange;
+        width: 100vw;
+        height: 80vh;
+
+
+    }
+   </style>
+</head>
+<body>
+<header>
+
+    <div class="logo">
+        
+        <h1><i class="fa-regular fa-snowflake"></i></h1>
+        <h1>VMfold</h1>
+    </div>
+    <div class="About">
+       
+        <h5>Home</h5>
+        <h5>About</h5>
+        <h5>Our services</h5>
+        <h5>Features</h5>
+        <h5>Blog</h5>
+        <h5>Pages</h5>
+        <h5>Portfolio</h5>
+        <h5><i class="fa-solid fa-magnifying-glass"></i></h5>
+
+    </div>
+
+</header>
+<section>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">
+                <p>
+                    Interior Decoration
+                </p>
+                <p>
+                    For Your Home
+                </p>
+                <p>
+                    80% discount
+                </p>
+
+            </div>
+            <img class="img_slider" src="blog_1.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">
+                <p>
+                    Minimalist
+                </p>
+                <p>
+                    Interior Design
+                </p>
+
+            </div>
+            <img class="img_slider" src="blog_2.jpg">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">
+                
+                <p>
+                          Hall Interior Design
+                </p>
+
+            </div>
+            <img class="img_slider" src="advertisement.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">
+                <p>
+                    Some Furniture
+
+                </p>
+                <p>
+                    Vocabulary
+
+                </p>
+
+            </div>
+            <img class="img_slider" src="blog_3.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+
+
+
+
+</section>
+
+    
+</body>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+
+</html>
